@@ -17,7 +17,7 @@ module ABAnalyzer
       sum=0
       @values.each_cell { |colname, rowname, value|
         ex = expected(colname, rowname)
-        test_sufficient_data(colname, rowname, ex, value)
+        #test_sufficient_data(colname, rowname, ex, value)
         sum += ((value - ex) ** 2) / ex
       }
       return sum
@@ -27,7 +27,7 @@ module ABAnalyzer
       sum=0
       @values.each_cell { |colname, rowname, value|
         ex = expected(colname, rowname)
-        test_sufficient_data(colname, rowname, ex, value)
+        #test_sufficient_data(colname, rowname, ex, value)
         sum += value * Math.log(value / ex)
       }
       return sum
